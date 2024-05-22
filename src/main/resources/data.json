@@ -1,0 +1,75 @@
+[
+  {
+    "name" : "E1001",
+    "capacity" : 23
+  },
+  {
+    "name" : "E1002",
+    "capacity" : 10,
+    "equipments" : [
+      "ecran"
+    ]
+  },
+  {
+    "name" : "E1003",
+    "capacity" : 8,
+    "equipments" : [
+      "pieuvre"
+    ]
+  },
+  {
+    "name" : "E1004",
+    "capacity" : 4,
+    "equipments" : [
+      "tableau"
+    ]
+  },
+  {
+    "name" : "E2001",
+    "capacity" : 4
+  },
+  {
+    "name" : "E2002",
+    "capacity" : 15,
+    "equipments" : [
+      "ecran",
+      "webcam"
+    ]
+  },
+  {
+    "name" : "E2003",
+    "capacity" : 7
+  },
+  {
+    "name" : "E2004",
+    "capacity" : 9,
+    "equipments" : [
+      "tableau"
+    ]
+  },
+  {
+    "name" : "E3001",
+    "capacity" : 13,
+    "equipments" : [
+      "ecran",
+      "pieuvre",
+      "webcam"
+    ]
+  },
+  {
+    "name" : "E3002",
+    "capacity" : 8
+  },
+  {
+    "name" : "E3003",
+    "capacity" : 9,
+    "equipments" : [
+      "ecran",
+      "pieuvre"
+    ]
+  },
+  {
+    "name" : "E3004",
+    "capacity" : 4
+  }
+]
