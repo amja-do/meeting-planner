@@ -40,7 +40,7 @@ Le `ReservationController` gère les opérations liées aux réservations dans l
   - **Code** : `404 NOT FOUND`
   - **Contenu** : "Aucune salle disponible pour cette réservation" si aucune salle appropriée n'est trouvée.
 
-### 3. Trouver la meilleure salle pour faire leur réunion pour lundi matin
+### 3. Trouver les meilleures salles pour les réunions du lundi matin.
 
 - **URL** : `/api/v2/reservations`
 - **Méthode** : `GET`
