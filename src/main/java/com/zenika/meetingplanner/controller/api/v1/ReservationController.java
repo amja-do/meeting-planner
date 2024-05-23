@@ -9,6 +9,7 @@ import com.zenika.meetingplanner.service.ReservationService;
 import com.zenika.meetingplanner.service.RoomService;
 
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDate;
@@ -16,6 +17,7 @@ import java.time.LocalTime;
 import java.util.List;
 
 @RestController
+@Component("v1ReservationController")
 @RequestMapping("/api/v1/reservations")
 public class ReservationController {
 
@@ -80,6 +82,7 @@ public class ReservationController {
                     .startTime(request.getStartTime())
                     .endTime(request.getStartTime().plusHours(1))
                     .type(request.getType())
+                    .attendees(request.getAttendees())
                     .reservedBy(request.getReservedBy())
                     .room(bestFittingRoom)
                     .build();

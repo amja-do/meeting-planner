@@ -1,0 +1,122 @@
+[
+  {
+    "meeting": 1,
+    "time": "09:00",
+    "type": "VC",
+    "attendees": 8
+  },
+  {
+    "meeting": 2,
+    "time": "09:00",
+    "type": "VC",
+    "attendees": 6
+  },
+  {
+    "meeting": 3,
+    "time": "11:00",
+    "type": "RC",
+    "attendees": 4
+  },
+  {
+    "meeting": 4,
+    "time": "11:00",
+    "type": "RS",
+    "attendees": 2
+  },
+  {
+    "meeting": 5,
+    "time": "11:00",
+    "type": "SPEC",
+    "attendees": 9
+  },
+  {
+    "meeting": 6,
+    "time": "09:00",
+    "type": "RC",
+    "attendees": 7
+  },
+  {
+    "meeting": 7,
+    "time": "08:00",
+    "type": "VC",
+    "attendees": 9
+  },
+  {
+    "meeting": 8,
+    "time": "08:00",
+    "type": "SPEC",
+    "attendees": 10
+  },
+  {
+    "meeting": 9,
+    "time": "09:00",
+    "type": "SPEC",
+    "attendees": 5
+  },
+  {
+    "meeting": 10,
+    "time": "09:00",
+    "type": "RS",
+    "attendees": 4
+  },
+  {
+    "meeting": 11,
+    "time": "09:00",
+    "type": "RC",
+    "attendees": 8
+  },
+  {
+    "meeting": 12,
+    "time": "11:00",
+    "type": "VC",
+    "attendees": 12
+  },
+  {
+    "meeting": 13,
+    "time": "11:00",
+    "type": "SPEC",
+    "attendees": 5
+  },
+  {
+    "meeting": 14,
+    "time": "08:00",
+    "type": "VC",
+    "attendees": 3
+  },
+  {
+    "meeting": 15,
+    "time": "08:00",
+    "type": "SPEC",
+    "attendees": 2
+  },
+  {
+    "meeting": 16,
+    "time": "08:00",
+    "type": "VC",
+    "attendees": 12
+  },
+  {
+    "meeting": 17,
+    "time": "10:00",
+    "type": "VC",
+    "attendees": 6
+  },
+  {
+    "meeting": 18,
+    "time": "11:00",
+    "type": "RS",
+    "attendees": 2
+  },
+  {
+    "meeting": 19,
+    "time": "09:00",
+    "type": "RS",
+    "attendees": 4
+  },
+  {
+    "meeting": 20,
+    "time": "09:00",
+    "type": "RC",
+    "attendees": 7
+  }
+]

@@ -11,10 +11,12 @@ import lombok.NoArgsConstructor;
 @Builder
 public class ReservationDto {
     private Long id;
+    private int reservationNumber;
     private String date;
     private String startTime;
     private String endTime;
     private String type;
+    private int attendees;
     private String reservedBy;
     private RoomDto room;
 

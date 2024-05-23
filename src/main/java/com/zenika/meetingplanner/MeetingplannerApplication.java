@@ -1,7 +1,7 @@
 package com.zenika.meetingplanner;
 
 import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.ObjectMapper;
+import com.zenika.meetingplanner.helper.JsonReader;
 import com.zenika.meetingplanner.model.Equipment;
 import com.zenika.meetingplanner.model.Room;
 import com.zenika.meetingplanner.repository.EquipmentRepository;
@@ -13,9 +13,6 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
-import org.springframework.core.io.ClassPathResource;
-
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -45,7 +42,7 @@ public class MeetingplannerApplication {
 				availableEquipments.add(savedEquipment);
 			}
 
-			for(JsonNode jsonNode : readJsonFile()){
+			for(JsonNode jsonNode : JsonReader.read("rooms")){
 				List<String> extractedEquipments = extractEquipments(jsonNode.get("equipments"));
 				Set<Equipment> matchingEquipments = getMatchingEquipments(availableEquipments, extractedEquipments);
 				Room room = Room.builder()
@@ -60,18 +57,6 @@ public class MeetingplannerApplication {
 	}
 
 
-	/**
-	 * Read the json file (rooms data) and return a list of type JsonNode
-	 * @return List of JsonNode
-	 * @throws IOException
-	 */
-	public JsonNode readJsonFile() throws IOException {
-		ClassPathResource resource = new ClassPathResource("data.json");
-
-		ObjectMapper objectMapper = new ObjectMapper();
-
-		return objectMapper.readTree(resource.getInputStream());
-	}
 
 
 	/**
@@ -105,7 +90,6 @@ public class MeetingplannerApplication {
 				}
 			}
 		}
-		System.out.println(matchingEquipments.size());
 		return matchingEquipments;
 	}
 

@@ -40,6 +40,17 @@ Le `ReservationController` gère les opérations liées aux réservations dans l
   - **Code** : `404 NOT FOUND`
   - **Contenu** : "Aucune salle disponible pour cette réservation" si aucune salle appropriée n'est trouvée.
 
+### 3. Trouver la meilleure salle pour faire leur réunion pour lundi matin
+
+- **URL** : `/api/v2/reservations`
+- **Méthode** : `GET`
+- **Description** : Récupère une liste de toutes les réservations avec la meilleure salle.
+- **Réponse en cas de succès** :
+  - **Code** : `200 OK`
+  - **Contenu** : Une liste d'objets `ReservationDto`.
+- **Réponse en cas d'erreur** :
+  - **Code** : `400 BAD REQUEST`
+  - **Contenu** : Chaîne de message d'erreur.
   
 ## Règles de validation
 - Le type de réunion doit être l'un des suivants : `VC`, `SPEC`, `RC`, `RS`.

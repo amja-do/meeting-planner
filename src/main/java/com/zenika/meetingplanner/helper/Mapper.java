@@ -71,10 +71,12 @@ public class Mapper {
     public static ReservationDto ReservationToReservationDto(com.zenika.meetingplanner.model.Reservation reservation) {
         return ReservationDto.builder()
                 .id(reservation.getId())
-                .date(reservation.getDate().format(DateTimeFormatter.ofPattern("dd/MM/yyyy")))
-                .startTime(reservation.getStartTime().format(DateTimeFormatter.ofPattern("HH:mm")))
-                .endTime(reservation.getEndTime().format(DateTimeFormatter.ofPattern("HH:mm")))
+                .reservationNumber(reservation.getReservationNumber())
+                .date(reservation.getDate() != null ? reservation.getDate().format(DateTimeFormatter.ofPattern("dd/MM/yyyy")) : null)
+                .startTime(reservation.getStartTime() != null ? reservation.getStartTime().format(DateTimeFormatter.ofPattern("HH:mm")) : null)
+                .endTime(reservation.getEndTime() != null ? reservation.getEndTime().format(DateTimeFormatter.ofPattern("HH:mm")) : null)
                 .type(reservation.getType())
+                .attendees(reservation.getAttendees())
                 .reservedBy(reservation.getReservedBy())
                 .room(RoomToRoomDto(reservation.getRoom()))
                 .build();
@@ -88,10 +90,12 @@ public class Mapper {
     public static Reservation ReservationDtoToReservation(ReservationDto reservationDto) {
         return Reservation.builder()
                 .id(reservationDto.getId())
-                .date(java.time.LocalDate.parse(reservationDto.getDate(), DateTimeFormatter.ofPattern("dd/MM/yyyy")))
-                .startTime(java.time.LocalTime.parse(reservationDto.getStartTime(), DateTimeFormatter.ofPattern("HH:mm")))
-                .endTime(java.time.LocalTime.parse(reservationDto.getEndTime(), DateTimeFormatter.ofPattern("HH:mm")))
+                .reservationNumber(reservationDto.getReservationNumber())
+                .date(reservationDto.getDate() != null ? java.time.LocalDate.parse(reservationDto.getDate(), DateTimeFormatter.ofPattern("dd/MM/yyyy")) : null)
+                .startTime(reservationDto.getStartTime() != null ? java.time.LocalTime.parse(reservationDto.getStartTime(), DateTimeFormatter.ofPattern("HH:mm")) : null)
+                .endTime(reservationDto.getEndTime() != null ? java.time.LocalTime.parse(reservationDto.getEndTime(), DateTimeFormatter.ofPattern("HH:mm")) : null)
                 .type(reservationDto.getType())
+                .attendees(reservationDto.getAttendees())
                 .reservedBy(reservationDto.getReservedBy())
                 .room(RoomDtoToRoom(reservationDto.getRoom()))
                 .build();
